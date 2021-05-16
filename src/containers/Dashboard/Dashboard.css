@@ -5,3 +5,10 @@ canvas {
   margin-right: auto;
   display: block;
 }
+
+@media (max-width: 320px){
+  canvas{
+  max-width:100% !important;
+  margin-top: 20px;
+  }
+  }

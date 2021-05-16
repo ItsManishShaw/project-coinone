@@ -5,7 +5,7 @@ import useWindowResize from '../../hooks/useWindowResize';
 
 const DoughnutChart = ({filter, data, centerTitle = 'Total' }) => {
   const [windowWidth, windowHeight] = useWindowResize();
-  return (<div className="mx-auto  w-full relative">
+  return (<div className="mx-auto  w-full relative ">
     <Doughnut
       data={data}
       options={{

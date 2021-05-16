@@ -43,10 +43,16 @@ const CommonScreen = ({ data }) => {
 
   const useStyles = makeStyles({
     middle: {
-      margin: windowWidth > 767 ?10:20,
+      margin: windowWidth > 767 ? 10 : 20,
       width: windowWidth > 767 ? 1 : '90%',
       height: windowWidth > 767 ? '' : 1,
+    },
+    middle2: {
+      margin: windowWidth > 767 ? 10 : 20,
+      width: windowWidth > 1023 ? 1 :windowWidth > 767?(searchParams === 'all'||searchParams === 'freetime')? '90%':1:'90%',
+      height: windowWidth > 1023 ? 350 : windowWidth > 767 ? (searchParams === 'all' || searchParams === 'freetime')? 1:350:1
     }
+
   });
   const classes = useStyles();
 
@@ -69,8 +75,8 @@ const CommonScreen = ({ data }) => {
     ]
   }
   return (
-    <div className="relative w-full flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-start items-center pt-5 pb-10 ">
-      <div className="box-border content-center md:max-w-9/20 lg:max-w-3/10 items-center flex flex-col">
+    <div className="relative w-full h-full flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-start content-start items-center pt-5 pb-10 ">
+      <div className="box-border content-center items-center flex flex-col overflow-x-auto  md:max-w-9/20 lg:max-w-3/10" style={{ ...(windowWidth > 340 ? { minWidth: '300px' } : {}) }}>
         <div className="text-center text-lg font-medium -mb-3 ">
           {searchParams === 'all' ? 'All Screen Time' : searchParams === 'studytime' ? 'Study Time' : searchParams === 'classtime' ? 'Class Time' : 'Free Time'}
         </div>
@@ -98,8 +104,10 @@ const CommonScreen = ({ data }) => {
               <div className="font-medium">Max</div>
               <div className="text-lg font-bold">{timeConvert(data?.freeTimeMaxUsage)}</div>
             </div>
-          </div>
-          <BorderLinearProgress variant="determinate" value={parseInt(data?.chartData?.freeTime?.total) / parseInt(data?.freeTimeMaxUsage) * 100} />
+            </div>
+            <div className="max-w-full lg:max-w-11/12 ">
+              <BorderLinearProgress variant="determinate" value={parseInt(data?.chartData?.freeTime?.total) / parseInt(data?.freeTimeMaxUsage) * 100} />
+              </div>
             <div className="bg-white ml-auto rounded w-22 h-8 md:h-auto flex mt-8 w-max">
             <Button variant="outlined" color="primary" size={windowWidth < 768 ? 'small' : 'large'}>
               <span className="capitalize block text-xs md:text-base bg-white flex-shrink-0 ">Extend Free-time</span>
@@ -110,9 +118,9 @@ const CommonScreen = ({ data }) => {
         </div>
         </>
       }
-      {(windowWidth < 768 || windowWidth > 1024) && <Divider classes={{
-        middle: classes.middle
-      }} classKey="middle" variant={'middle'} orientation={windowWidth > 767 ? 'vertical' : 'horizontal'} flexItem />}
+    <Divider classes={{
+        middle: classes.middle2
+      }} classKey="middle" variant={'middle'} orientation={windowWidth > 1024 ?'vertical' : 'horizontal'}  />
       <div className="w-full flex-none flex flex-col justify-center content-start md:max-w-9/20 lg:max-w-3/10 h-full px-2">
         <h2 className="text-center md:text-black text-lg font-medium lg:mt-0  mb-10 self-start mx-auto
          ">By Devices</h2>
