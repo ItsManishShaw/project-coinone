@@ -1,0 +1,12 @@
+.userName{
+font-family: Segoe UI;
+font-style: normal;
+font-weight: bold;
+color: #022742;
+}
+
+.MuiAppBar-colorPrimary{
+  background-color: transparent !important;
+  background: linear-gradient(90.96deg, rgba(48, 118, 222, 0.4) 1.05%, rgba(241, 108, 11, 0.13) 99.89%);
+
+}
