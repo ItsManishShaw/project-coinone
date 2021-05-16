@@ -46,10 +46,10 @@ const Dashboard = () => {
         backgroundColor:'#fdefdd'
       }}>
         <AppBar />
-        <div className="mx-5 w-full md:mx-10 lg:mx-20 px-1 pt-10">
+        <div className="mx-5 md:mx-10 lg:mx-20 px-1 pt-10">
           <h1 className="text-lg font-medium font-semibold">Activities Summary </h1>
           <DropDownFilter filter={filter} setFilter={setFilter}/>
-          <div className="bg-white w-full  mt-4 h-full " style={{width:'fit-content'}}>
+          <div className="bg-white w-full  mt-4 h-full ">
           <Location>
             {({ location }) => (
                       <>
