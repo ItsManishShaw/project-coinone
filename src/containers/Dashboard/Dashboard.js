@@ -25,7 +25,6 @@ const Dashboard = () => {
   useEffect(() => {
     coinOneAPI.get(`/screentime`,)
       .then(response => {
-        console.log({response})
       setData(response?.data[0]);
     });
   }, [])

@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
 export default function PrimarySearchAppBar() {
   
   const [windowWidth, windowHeight] = useWindowResize();
-  console.log({windowWidth})
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
