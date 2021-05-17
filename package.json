@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "webApp for coinedOne",
+  "homepage":"www.coinedone.com",
   "author": "Manish shaw <officialmanishshaw@gmail.com>",
   "dependencies": {
     "@craco/craco": "^6.1.2",
