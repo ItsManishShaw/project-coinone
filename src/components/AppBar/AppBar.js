@@ -1,18 +1,14 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+import MenuItem from '@material-ui/core/MenuItem';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import edit from '../../images/edit.svg';
+import device from '../../images/device.svg';
+import del from '../../images/del.svg';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
@@ -27,12 +23,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar() {
-  
+
   const [windowWidth, windowHeight] = useWindowResize();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -64,8 +59,9 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>{anchorEl?.innerText ? 'Class-Time' : 'Profile'}</MenuItem>
+      {anchorEl?.innerText&& < MenuItem onClick={handleMenuClose}>{anchorEl?.innerText ? 'Study-Time' : 'Profile'}</MenuItem>}
+      <MenuItem onClick={handleMenuClose}>{anchorEl?.innerText?'Free-Time':'My account'}</MenuItem>
     </Menu>
   );
 
@@ -82,30 +78,22 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
+          <img className="w-5 h-5" src={device} alt="add"/>
         </IconButton>
-        <p>Messages</p>
+        <p>Add Device</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
+
+      <IconButton aria-label="show 4 new mails" color="inherit">
+          <img className="w-5 h-5" src={edit} alt="Edit"/>
         </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
+        <p>Edit Details</p>
+        </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
+      <IconButton aria-label="show 4 new mails" color="inherit">
+          <img className="w-5 h-5" src={del} alt="Delete "/>
         </IconButton>
-        <p>Profile</p>
+        <p>Delete Child</p>
       </MenuItem>
     </Menu>
   );
@@ -124,7 +112,6 @@ export default function PrimarySearchAppBar() {
               color="default"
             >
               <AccountCircle
-                
                 fontSize={windowWidth < 767 ? 'medium' : 'large'}
               />
             </IconButton>
@@ -149,7 +136,8 @@ export default function PrimarySearchAppBar() {
           </div>
         </Toolbar>
       </AppBar>
-
+      {renderMobileMenu}
+      {renderMenu}
     </div>
   );
 }

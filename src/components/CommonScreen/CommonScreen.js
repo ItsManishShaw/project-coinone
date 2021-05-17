@@ -77,7 +77,7 @@ const CommonScreen = ({ data }) => {
   return (
     <div className="relative w-full h-full flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-start content-start items-center pt-5 pb-10 ">
       <div className="box-border content-center items-center flex flex-col overflow-x-auto  md:max-w-9/20 lg:max-w-3/10" style={{ ...(windowWidth > 340 ? { minWidth: '300px' } : {}) }}>
-        <div className="text-center text-lg font-medium -mb-3 ">
+        <div className="text-center text-black text-lg font-medium -mb-3 ">
           {searchParams === 'all' ? 'All Screen Time' : searchParams === 'studytime' ? 'Study Time' : searchParams === 'classtime' ? 'Class Time' : 'Free Time'}
         </div>
           <DoughnutChart filter={searchParams} data={state} centerTitle={centerTitle} />
@@ -92,7 +92,7 @@ const CommonScreen = ({ data }) => {
       }} classKey="middle" variant={'middle'} orientation={windowWidth>767?'vertical':'horizontal'} flexItem/>
        <div className="w-full mx-auto flex flex-col justify-center content-center md:max-w-9/20 lg:max-w-3/10 h-full px-2 ">
         <div className="">
-          <h2 className="text-center md:text-black text-lg font-medium  mt-3 lg:mt-0  mb-10 md:mb-16 ">Free-time Usage</h2>
+          <h2 className="text-center text-black text-lg font-medium  mt-3 lg:mt-0  mb-10 md:mb-16 ">Free-time Usage</h2>
           <div className="flex flex-row flex-nowrap w-full justify-around content-center mb-3">
             <div className="flex flex-col mx-auto text-center">
               <div className="font-medium">Used</div>
@@ -122,7 +122,7 @@ const CommonScreen = ({ data }) => {
         middle: classes.middle2
       }} classKey="middle" variant={'middle'} orientation={windowWidth > 1024 ?'vertical' : 'horizontal'}  />
       <div className="w-full flex-none flex flex-col justify-center content-start md:max-w-9/20 lg:max-w-3/10 h-full px-2">
-        <h2 className="text-center md:text-black text-lg font-medium lg:mt-0  mb-10 self-start mx-auto
+        <h2 className="text-center text-black text-lg font-medium lg:mt-0  mb-10 self-start mx-auto
          ">By Devices</h2>
         <div className="flex flex-col flex-nowrap w-full justify-around content-center mb-3 space-y-8 ">
           <div className="flex flex-row space-x-4 mx-auto"><img className="block w-10 h-16" src={imgMb} alt="mobileImg" />
