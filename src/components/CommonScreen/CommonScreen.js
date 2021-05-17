@@ -127,14 +127,19 @@ const CommonScreen = ({ data }) => {
         <div className="flex flex-col flex-nowrap w-full justify-around content-center mb-3 space-y-8 ">
           <div className="flex flex-row space-x-4 mx-auto"><img className="block w-10 h-16" src={imgMb} alt="mobileImg" />
             <div className="flex flex-col"><p>Adi’s Phone</p>
-              <p className="font-normal text-lg font-thin" style={{ color: '#3D7FE0' }}>{timeConvert(data?.deviceUsage?.totalTime?.mobile)}</p>
+              <p className="font-normal text-lg font-thin" style={{ color: '#3D7FE0' }}>
+                {timeConvert(searchParams === 'all' ? data?.deviceUsage?.totalTime?.mobile
+                : searchParams === 'classtime' ? data?.deviceUsage?.classTime?.mobile
+                : searchParams === 'studytime'?data?.deviceUsage?.studyTime?.mobile:data?.deviceUsage?.freeTime?.mobile)}</p>
               </div>
               </div>
           <div className="flex flex-row space-x-4 mx-auto mb-20">
             <img className="block w-36 h-22" src={imgLaptop} alt="mobileImg" />
             <div className="flex flex-col">
               <p>Adi’s Laptop</p>
-              <p className="font-normal text-lg font-thin" style={{ color: '#3D7FE0' }}>{timeConvert(data?.deviceUsage?.totalTime?.laptop)}
+              <p className="font-normal text-lg font-thin" style={{ color: '#3D7FE0' }}> {timeConvert(searchParams === 'all' ? data?.deviceUsage?.totalTime?.laptop
+                : searchParams === 'classtime' ? data?.deviceUsage?.classTime?.laptop
+                : searchParams === 'studytime'?data?.deviceUsage?.studyTime?.laptop:data?.deviceUsage?.freeTime?.laptop)}
               </p></div>
               </div>
         </div>
