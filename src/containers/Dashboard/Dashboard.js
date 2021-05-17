@@ -66,7 +66,6 @@ const Dashboard = () => {
                               >
                                 <CommonScreen
                                   data={data}
-                                  exact
                                   path="/summary"
                                 />
                                 <NotFound default />
