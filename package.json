@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "webApp for coinedOne",
-  "homepage":"www.hardcore-galileo-d97505.netlify.com",
+  "homepage": "www.hardcore-galileo-d97505.netlify.com",
   "author": "Manish shaw <officialmanishshaw@gmail.com>",
   "dependencies": {
     "@craco/craco": "^6.1.2",
