@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/www.hardcore-galileo-d97505.netlify.com/static/css/main.e013d18b.chunk.css",
-    "main.js": "/www.hardcore-galileo-d97505.netlify.com/static/js/main.67751c6d.chunk.js",
-    "main.js.map": "/www.hardcore-galileo-d97505.netlify.com/static/js/main.67751c6d.chunk.js.map",
-    "runtime-main.js": "/www.hardcore-galileo-d97505.netlify.com/static/js/runtime-main.a0ae32ac.js",
-    "runtime-main.js.map": "/www.hardcore-galileo-d97505.netlify.com/static/js/runtime-main.a0ae32ac.js.map",
-    "static/js/2.190f84b1.chunk.js": "/www.hardcore-galileo-d97505.netlify.com/static/js/2.190f84b1.chunk.js",
-    "static/js/2.190f84b1.chunk.js.map": "/www.hardcore-galileo-d97505.netlify.com/static/js/2.190f84b1.chunk.js.map",
-    "static/js/3.3c14b2ea.chunk.js": "/www.hardcore-galileo-d97505.netlify.com/static/js/3.3c14b2ea.chunk.js",
-    "static/js/3.3c14b2ea.chunk.js.map": "/www.hardcore-galileo-d97505.netlify.com/static/js/3.3c14b2ea.chunk.js.map",
-    "index.html": "/www.hardcore-galileo-d97505.netlify.com/index.html",
-    "static/css/main.e013d18b.chunk.css.map": "/www.hardcore-galileo-d97505.netlify.com/static/css/main.e013d18b.chunk.css.map",
-    "static/js/2.190f84b1.chunk.js.LICENSE.txt": "/www.hardcore-galileo-d97505.netlify.com/static/js/2.190f84b1.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.e013d18b.chunk.css",
+    "main.js": "/static/js/main.67751c6d.chunk.js",
+    "main.js.map": "/static/js/main.67751c6d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf0bc2e4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf0bc2e4.js.map",
+    "static/js/2.190f84b1.chunk.js": "/static/js/2.190f84b1.chunk.js",
+    "static/js/2.190f84b1.chunk.js.map": "/static/js/2.190f84b1.chunk.js.map",
+    "static/js/3.3c14b2ea.chunk.js": "/static/js/3.3c14b2ea.chunk.js",
+    "static/js/3.3c14b2ea.chunk.js.map": "/static/js/3.3c14b2ea.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e013d18b.chunk.css.map": "/static/css/main.e013d18b.chunk.css.map",
+    "static/js/2.190f84b1.chunk.js.LICENSE.txt": "/static/js/2.190f84b1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a0ae32ac.js",
+    "static/js/runtime-main.bf0bc2e4.js",
     "static/js/2.190f84b1.chunk.js",
     "static/css/main.e013d18b.chunk.css",
     "static/js/main.67751c6d.chunk.js"

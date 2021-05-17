@@ -1,7 +1,7 @@
 {
   "name": "projectCoinedOne",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "webApp for coinedOne",
   "author": "Manish shaw <officialmanishshaw@gmail.com>",
   "dependencies": {
